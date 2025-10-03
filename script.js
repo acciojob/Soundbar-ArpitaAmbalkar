@@ -4,7 +4,7 @@ let div=document.getElementById("buttons");
 
 sounds.forEach((sound)=>{
 	const audio=document.createElement("audio");
-	audio.src=`./source${sound}.mp3`;
+	audio.src=`./sounds/${sound}.mp3`;
 	audio.id=sound;
 	audio.preload='auto';	
 	document.body.appendChild(audio);
@@ -13,7 +13,7 @@ sounds.forEach((sound)=>{
 		btn.textContent=sound;
 		btn.addEventListener("click",()=>{
 			stopSounds();
-			const elem=document.getElementById("sound");
+			const elem=document.getElementById(sound);
 			elem.currentTime=0;
 			const p=elem.play();
 		});
