@@ -1,11 +1,11 @@
 //your JS code here. If required.
-let sounds=['applause','boo','gasp','tada','victory','wrong']
+const sounds=['applause','boo','gasp','tada','victory','wrong']
 let div=document.getElementById("buttons");
 
 sounds.forEach((sound)=>{
 	const audio=document.createElement("audio");
 	audio.src=`./source${sound}.mp3`;
-	audio.id="sound";
+	audio.id=sound;
 	audio.preload='auto';	
 	document.body.appendChild(audio);
 		const btn=document.createElement("button");
